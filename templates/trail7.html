@@ -1,0 +1,214 @@
+
+    <!DOCTYPE html>
+    <html>
+        <head>
+        <style>
+             body{
+                background: rgb(243, 243, 228);
+                no-repeat center center fixed;
+                background-size: cover;
+                font-family: sans-serif;
+            }
+
+            header{
+                width:80%;
+                margin: auto;
+                overflow: hidden;
+            }
+
+            
+    h1{
+  text-align: center;
+  color: purple;
+  
+}
+
+.button {
+  background-color: blue; /* Green */
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+            .head{
+                float: center;
+                color: whitesmoke;
+                font-family: cursive;
+
+            }
+
+            nav{
+                float: right;
+            }
+
+            li{
+                display: inline;
+                padding: 1rem;
+
+            }
+
+            li a {
+                color: whitesmoke;
+                text-decoration: none;
+                font-weight: bold;
+            }
+
+            .category{
+                color: whitesmoke;padding: 10px;
+                margin-top: 1%;
+                display: flex;
+                
+                text-align: center;
+                font-family: cursive;
+            }
+h2{
+    text-
+}
+          
+           
+
+           
+        </style>
+         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    </head>
+    <body>
+        <header>
+            <div class="head">
+                <h1><u>SPB HITS</u></h1>
+            </div>
+            
+            
+                    </header>
+                    <showcase>
+                        <div class="container">
+                            <h2>Songs</h2>
+                            
+                            <a id="fa" href="{% url 'trail7' %}">
+                                <label class="btn btn-outline-primary" for="btnradio1">ALL ({{songs.count}})</label>
+                            </a><br>
+                            {% for year in years %}
+                            
+                            <a id="fa" href="{% url 'trail7' %}?q={{year.year}}" >
+                                <label class="btn btn-outline-primary" for="btnradio1">{{year.year}} ({{year.songs_set.all.count}})</label>
+                            </a>
+                            {% endfor %}
+
+                            <div class="search-container">
+                                <i class="fas fa-search"></i>
+                                <form method="GET" action="{% url 'trail7' %}">
+                                    <input type="text" id="" name="q" placeholder="Search...">
+                                    <button type="submit" class="btn btn-dark">Search</button>
+                                </form>
+                            </div>
+            <table border="1px">
+                <tr>
+                    <th>Song Title</th>
+                    <th>Downlod</th>
+                </tr>
+                {% for song in songs %}
+                <tr>
+                    <td>{{song.name}}</td>
+                    <td> <button type="button" class="btn btn-dark"><a href="{{ song.song.url }}">Listen</a></button></td>
+                </tr>
+                {% endfor %}
+            </table>
+                           
+                            <div class="careers">
+                                <h2>1.SPB Tamil hits</h2><br>
+        
+            
+            <iframe width="420" height="345" 
+            src="https://www.youtube.com/embed/u0CtfXRibAw">
+            </iframe>
+
+            <iframe width="420" height="345" 
+            src="https://www.youtube.com/embed/yHm8VhgO9p4">
+            </iframe>
+
+            <iframe width="420" height="345" 
+            src="https://www.youtube.com/embed/F9CGXWOyt_k">
+            </iframe>
+            <hr size="3" width="100%" color="black"><br>
+
+            <h2>2.SPB Telugu hits</h2><br>
+        
+            
+            <iframe width="420" height="345" 
+            src="https://www.youtube.com/embed/RsuOontkJH4">
+            </iframe>
+
+            <iframe width="420" height="345" 
+            src="https://www.youtube.com/embed/71SylryIWuk">
+            </iframe>
+
+            <iframe width="420" height="345" 
+            src="https://www.youtube.com/embed/s_TcKzSmvkA">
+            </iframe>
+            <hr size="3" width="100%" color="black"><br>
+            <h2>3.SPB Kannada hits</h2><br>
+        
+            
+            <iframe width="420" height="345" 
+            src="https://www.youtube.com/embed/T_C6sZ3TcOA">
+            </iframe>
+
+            <iframe width="420" height="345" 
+            src="https://www.youtube.com/embed/ew-izutC5hU">
+            </iframe>
+
+            <iframe width="420" height="345" 
+            src="https://www.youtube.com/embed/VIl0O1bH0aA">
+            </iframe>
+            <hr size="3" width="100%" color="black"><br>
+
+            <h2>4.SPB Malayalam hits</h2><br>
+        
+            
+            <iframe width="420" height="345" 
+            src="https://www.youtube.com/embed/N3VLo0acSoM">
+            </iframe>
+
+            <iframe width="420" height="345" 
+            src="https://www.youtube.com/embed/pQ9rL8joH7k">
+            </iframe>
+
+            <iframe width="420" height="345" 
+            src="https://www.youtube.com/embed/wCIVhoHcV0w">
+            </iframe>
+            <hr size="3" width="100%" color="black"><br>
+
+
+            <h2>5.SPB Hindi hits</h2><br>
+        
+            
+            <iframe width="420" height="345" 
+            src="https://www.youtube.com/embed/u9wlIiXfcV0">
+            </iframe>
+
+            <iframe width="420" height="345" 
+            src="https://www.youtube.com/embed/oGKDBhdxn6c">
+            </iframe>
+
+            <iframe width="420" height="345" 
+            src="https://www.youtube.com/embed/DUY9JhrHaZ4">
+            </iframe>
+            <hr size="3" width="100%" color="black">
+
+            
+
+            <a href="{%url 'home'%}">
+                <button class="button">Go back to home page</button>
+              </a>
+              <marquee><p>A tribute to S. P. Balasubrahmanyam</p></marquee>
+              <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    </body>
+    </html>
+
